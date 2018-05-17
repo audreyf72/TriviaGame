@@ -1,3 +1,4 @@
+//Create object variables for the each question containing an array and property value for the answers
 var triviaQuestions = [{
 	question: "In what city was the rock band BUSH formed?",
 	answerList: ["Seattle", "London", "Los Angeles", "New York"],
@@ -60,25 +61,32 @@ var triviaQuestions = [{
 	answer: 2
 }];
 
+//Create a variable for images that appear on the answer pages
 var pngArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
+//Create variables with responses to question page selection
 var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var messages = {
 	correct: "NICE, you got it!",
 	incorrect: "NOPE, that's not it.",
 	endTime: "TIME'S UP! Too slow.",
+
+//Create variable for scoreboard response
 	finished: "Okay! Let's see how you did."
 }
 
+//Function for start button to begin game and disappear
 $('#startBtn').on('click', function(){
 	$(this).hide();
 	newGame();
 });
 
+//Function for try again to reset game and disappear
 $('#startOverBtn').on('click', function(){
 	$(this).hide();
 	newGame();
 });
 
+//Function for the beginning of the game hiding divs for answer page and setting default values for the variables
 function newGame(){
 	$('#finalMessage').empty();
 	$('#correctAnswers').empty();
@@ -98,7 +106,7 @@ function newQuestion(){
 	$('#png').empty();
 	answered = true;
 	
-	//sets up new questions & answerList
+//Begins new questions page
 	$('#currentQuestion').html('Question #'+(currentQuestion+1)+' out of '+triviaQuestions.length);
 	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
@@ -109,7 +117,7 @@ function newQuestion(){
 		$('.answerList').append(choices);
 	}
 	countdown();
-	//clicking an answer will pause the time and setup answerPage
+//Clicking an answer will stop the timer and go to answer page
 	$('.thisChoice').on('click',function(){
 		userSelect = $(this).data('index');
 		clearInterval(time);
@@ -117,14 +125,17 @@ function newQuestion(){
 	});
 }
 
+//Sets time for 15 seconds and displays time remaining in timeLeft div
 function countdown(){
 	seconds = 15;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + ' seconds</h3>');
 	answered = true;
-	//sets timer to go down
+
+//Timer counts down 1 second
 	time = setInterval(showCountdown, 1000);
 }
 
+//Times up function marks question as unanswered and goes to answer page
 function showCountdown(){
 	seconds--;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + ' seconds</h3>');
@@ -135,15 +146,19 @@ function showCountdown(){
 	}
 }
 
+//Clears divs from question page on answer page
 function answerPage(){
 	$('#directions').empty();
-	$('.thisChoice').empty(); //Clears question page
+	$('.thisChoice').empty(); 
 	$('.question').empty();
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
-	$('#png').html('<img src = "assets/images/'+ pngArray[currentQuestion] +'.png" width = "500px">');
-	//checks to see correct, incorrect, or unanswered
+	
+//Shows image on answer page to corresponing question
+	$('#png').html('<img src = "assets/images/'+ pngArray[currentQuestion] +'.png" width = "425px">');
+	
+//checks to see if answer is correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
 		correctAnswer++;
 		$('#message').html(messages.correct);
@@ -157,15 +172,16 @@ function answerPage(){
 		$('#correctedAnswer').html('The correct answer was: ' + rightAnswerText);
 		answered = true;
 	}
-	
+//Sets 3 second delay on answer page before next question
 	if(currentQuestion == (triviaQuestions.length-1)){
-		setTimeout(scoreboard, 5000)
+		setTimeout(scoreboard, 3000)
 	} else{
 		currentQuestion++;
-		setTimeout(newQuestion, 5000);
+		setTimeout(newQuestion, 3000);
 	}	
 }
 
+//Clears all divs to show player results and reset button
 function scoreboard(){
 	$('#directions').empty();
 	$('#currentQuestion').empty();

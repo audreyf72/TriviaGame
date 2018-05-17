@@ -47,6 +47,7 @@ header{
 .btn-primary:hover, .reset:hover{
 	width: 340px;
 	height: 90px;
+	cursor: pointer;
 }
 
 .container{
@@ -129,6 +130,12 @@ h2, #message, #finalMessage{
 	margin-top: 10px;
 	width: 300px;
 	height: 95px;
+}
+
+#startOverBtn:hover{
+	width: 290px;
+	height: 90px;
+	cursor: pointer;
 }
 
 #png{
