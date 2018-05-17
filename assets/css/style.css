@@ -9,8 +9,8 @@ body{
 	background: url("../images/paper_Background4.png"), url("../images/90sRockNight.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-position-y: 270px;
-	background-size: 85%, cover;
+	background-position-y: 285px, 270px;
+	background-size: 85%, 100%;
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
 	background-color: black;
@@ -19,10 +19,11 @@ body{
 header{
 	margin-bottom: 20px;
 	text-align: center;
-	height: 250px;
+	height: 275px;
 	width: 100%;
-	background: url("../images/rockband_Art-01.png") no-repeat;
-	background-size: contain;
+	background: url("../images/rockband_Art-01.png"), url("../images/grunge.png");
+	background-repeat: no-repeat;
+	background-size: contain, cover;
 	background-position: center;
 }
 
@@ -33,34 +34,28 @@ header{
 	background-color: none;
 	border: 0;
 	color: white;
-	font-family: 'Love Ya Like A Sister', cursive;
-	font-size: 30px;
 	width: 350px;
 	height: 95px;
 	padding: 20px;
 	margin-top: 10px;
 }
-.btn-primary:hover, .reset:hover{
-	background-color: none;
+
+.clear{
+	background: none;
 }
 
-.wrapper{
-	height: 650px;
-	width: 75%;
-	display: flex;
-	margin-left: auto;
-	margin-right: auto;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.btn-primary:hover, .reset:hover{
+	width: 340px;
+	height: 90px;
 }
 
 .container{
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 60px;
+	top: 0;
 	text-align: center;
-	width: 75%;
-	line-height: 30px;
+	width: 70%;
 }
 
 .heyYou{
@@ -80,7 +75,8 @@ header{
 	font-size: 24pt;
 	font-family: 'Finger Paint', cursive;
 	color: #ef3940;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+	padding-top: 15px;
 }
 
 .question{
@@ -108,6 +104,34 @@ h2, #message, #finalMessage{
 	padding: 0px;
 }
 
-#gif{
-	margin: 30px;
+#finalMessage{
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 30pt;
+	line-height: 36pt;
+	font-weight: bold;
+}
+
+#correctAnswers{
+	line-height: 200%;
+}
+
+#unanswered{
+	line-height: 200%;
+}
+
+#incorrectAnswers{
+	line-height: 200%;
+}
+
+#startOverBtn{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 300px;
+	height: 95px;
+}
+
+#png{
+	margin: 20 0 0 0;
+	padding: 0;
 }

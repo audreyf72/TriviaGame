@@ -32,10 +32,10 @@ var triviaQuestions = [{
 	answer: 1
 },{
 	question: "What was the name of the rock band WEEZER's first single",
-	answerList: ["Say It Aint\'t So", "Buddy Holly", "Undone - The Sweater Song", "Hash Pipe"],
+	answerList: ["Say It Ain\'t So", "Buddy Holly", "Undone - The Sweater Song", "Hash Pipe"],
 	answer: 2
 },{
-	question: "The guitarist Dave Navarro from JANES'S ADDICTION was married to what 90's sex symbol?",
+	question: "The guitarist Dave Navarro from JANE'S ADDICTION was married to what 90's sex symbol?",
 	answerList: ["Pamela Anderson", "Heather Locklear", "Claudia Schiffer", "Carmen Electra"],
 	answer: 3
 },{
@@ -60,13 +60,13 @@ var triviaQuestions = [{
 	answer: 2
 }];
 
-var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
+var pngArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
 var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var messages = {
 	correct: "NICE, you got it!",
 	incorrect: "NOPE, that's not it.",
 	endTime: "TIME'S UP! Too slow.",
-	finished: "Alright! Let's see how well you did."
+	finished: "Okay! Let's see how you did."
 }
 
 $('#startBtn').on('click', function(){
@@ -93,8 +93,9 @@ function newGame(){
 
 function newQuestion(){
 	$('#message').empty();
+	$('#directions').empty();
 	$('#correctedAnswer').empty();
-	$('#gif').empty();
+	$('#png').empty();
 	answered = true;
 	
 	//sets up new questions & answerList
@@ -135,13 +136,13 @@ function showCountdown(){
 }
 
 function answerPage(){
-	$('#currentQuestion').empty();
+	$('#directions').empty();
 	$('.thisChoice').empty(); //Clears question page
 	$('.question').empty();
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
-	$('#gif').html('<img src = "assets/images/'+ gifArray[currentQuestion] +'.gif" width = "400px">');
+	$('#png').html('<img src = "assets/images/'+ pngArray[currentQuestion] +'.png" width = "500px">');
 	//checks to see correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
 		correctAnswer++;
@@ -166,16 +167,18 @@ function answerPage(){
 }
 
 function scoreboard(){
+	$('#directions').empty();
+	$('#currentQuestion').empty();
 	$('#timeLeft').empty();
 	$('#message').empty();
 	$('#correctedAnswer').empty();
-	$('#gif').empty();
+	$('#png').empty();
 
 	$('#finalMessage').html(messages.finished);
 	$('#correctAnswers').html("Correct Answers: " + correctAnswer);
 	$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
 	$('#unanswered').html("Unanswered: " + unanswered);
-	$('#startOverBtn').addClass('reset');
+	$('#startOverBtn').addClass('clear');
 	$('#startOverBtn').show();
-	$('#startOverBtn').html('Start Over?');
+	$('#startOverBtn').html('<img src = "assets/images/startover_img-01.svg") no-repeat>');
 }
