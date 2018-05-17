@@ -2,57 +2,112 @@
 font-family: 'Bevan', cursive;
 font-family: 'Love Ya Like A Sister', cursive;
 font-family: 'Zilla Slab', serif;
-font-family: 'Vast Shadow', cursive;
 font-family: 'Finger Paint', cursive;
 font-family: 'Slackey', cursive;*/
 
 body{
-	background: url("../images/90sRockNight.jpg") no-repeat;
+	background: url("../images/paper_Background4.png"), url("../images/90sRockNight.jpg");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-position-y: 270px;
+	background-size: 85%, cover;
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
+	background-color: black;
 }
 
 header{
 	margin-bottom: 20px;
+	text-align: center;
+	height: 250px;
+	width: 100%;
+	background: url("../images/rockband_Art-01.png") no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .btn-primary,.reset{
-	background-color: black;
+	background: url("../images/start_img-01.svg") no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: none;
+	border: 0;
 	color: white;
-	font-family: 'Zilla Slab', serif;
+	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 30px;
+	width: 350px;
+	height: 95px;
 	padding: 20px;
-	margin-top: 100px;
+	margin-top: 10px;
 }
 .btn-primary:hover, .reset:hover{
-	background-color: #202364;
+	background-color: none;
+}
+
+.wrapper{
+	height: 650px;
+	width: 75%;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .container{
-	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
-	height: 100%;
-	width: 700px;
+	width: 75%;
+	line-height: 30px;
+}
+
+.heyYou{
+	font-size: 32pt;
+	font-family: 'Finger Paint', cursive;
+	color: #ef3940;
+	line-height: 200%;
+}
+
+#directions{
+	padding: 20px;
+	font-size: 18pt;
+	line-height: 150%;
+}
+
+#timeLeft{
+	font-size: 24pt;
+	font-family: 'Finger Paint', cursive;
+	color: #ef3940;
+	padding-bottom: 20px;
+}
+
+.question{
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 32pt;
+	line-height: 36pt;
+	font-weight: bold;
+}
+
+.answerList{
+	line-height: 200%;
 }
 
 h2, #message, #finalMessage{
-	font-family: Sigmar One;
+	font-family: 'Love Ya Like A Sister', cursive;
+	padding: 10px;
 }
 
 .thisChoice:hover{
-	background-color: #202364;
-	color: white;
-	padding: 10px;
+	background-image: url("../images/underline.svg");
+	background-repeat: no-repeat;
+	background-position-y: 24pt;
+	background-position: center;
+	color: red;
+	padding: 0px;
 }
 
 #gif{
 	margin: 30px;
-}
-
-@media screen and (max-width:640px){
-	.container{
-		width: 500px;
-		margin-top: 200px;
-		size: 200%;
-	}	
 }
