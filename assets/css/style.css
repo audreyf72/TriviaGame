@@ -1,15 +1,12 @@
 /*font-family: 'Cabin Sketch', cursive;
-font-family: 'Bevan', cursive;
 font-family: 'Love Ya Like A Sister', cursive;
-font-family: 'Zilla Slab', serif;
 font-family: 'Finger Paint', cursive;
-font-family: 'Slackey', cursive;*/
 
 body{
 	background: url("../images/paper_Background4.png"), url("../images/90sRockNight.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-position-y: 285px, 270px;
+	background-position-y: 290px, 270px;
 	background-size: 85%, 100%;
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
@@ -25,6 +22,7 @@ header{
 	background-repeat: no-repeat;
 	background-size: contain, cover;
 	background-position: center;
+	border-bottom: black 3px solid;
 }
 
 .btn-primary,.reset{
