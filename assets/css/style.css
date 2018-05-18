@@ -6,8 +6,8 @@ body{
 	background: url("../images/paper_Background4.png"), url("../images/90sRockNight.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-position-y: 290px, 270px;
-	background-size: 85%, 100%;
+	background-position-y: 290px, 0px;
+	background-size: 85%, cover;
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
 	background-color: black;
