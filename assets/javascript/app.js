@@ -66,8 +66,8 @@ var pngArray = ['question1', 'question2', 'question3', 'question4', 'question5',
 //Create variables with responses to question page selection
 var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var messages = {
-	correct: "NICE, you got it!",
-	incorrect: "NOPE, that's not it.",
+	correct: "OH SNAP! That's right!",
+	incorrect: "Nice try, NOT! Wrong answer.",
 	endTime: "TIME'S UP! Too slow.",
 
 //Create variable for scoreboard response
