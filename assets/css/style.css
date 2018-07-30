@@ -3,10 +3,10 @@ font-family: 'Love Ya Like A Sister', cursive;
 font-family: 'Finger Paint', cursive;*/
 
 body{
-	background: url("../images/paper_Background4.png"), url("../images/90sRockNight.jpg");
+	background: url("../images/paper_Background4.png"), url("../images/90sRockBlack.jpg");
 	background-repeat: no-repeat;
-	background-position: top;
-	background-position-y: 290px, 0px;
+	background-position-x: center;
+	background-position-y: 290px, 200px;
 	background-size: 85%, cover;
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
@@ -22,11 +22,10 @@ header{
 	text-align: center;
 	height: 275px;
 	width: 100%;
-	background: url("../images/rockband_Art-01.png"), url("../images/grunge.png");
+	background: url("../images/rockband_Art-01.png");
 	background-repeat: no-repeat;
-	background-size: contain, cover;
+	background-size: contain;
 	background-position: center;
-	border-bottom: black 3px solid;
 }
 
 .btn-primary,.reset{
