@@ -17,3 +17,17 @@ Click the “Start” button to start the game. You will be presented 15 multipl
 ## Additional thoughts
 
 Being a big music fan, I wanted to create a game that was challenging and fun for all ages with a music based theme. This game might be difficult for people under the age of 17 since they were not even born in the 90's, but most of the bands in this game are still popular today. I also tried to follow the 90's theme with the dark graphics and grunge style imagery. I'm sure anyone who was around in the 90's can appreciate the nostalgia I tried to convey with the design.
+
+## Screenshots
+
+Start Page
+![Full Size](/screenshots/start.png)
+
+Question Page
+![Full Size](/screenshots/question.png)
+
+Answer Page
+![Full Size](/screenshots/correct.png)
+
+Results Page
+![Full Size](/screenshots/results.png)
